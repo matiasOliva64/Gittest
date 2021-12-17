@@ -20,13 +20,16 @@ public class Archivos {
         String nombre, apellido, email;
 
 
+       JOptionPane.showMessageDialog(null, "Bienvenido al programa");
+
+
 
         archivo = new File("archivo.txt");
 
         if (!archivo.exists()) {
             try {
 
-                archivo.createNewFile();
+                archivo.createNewFile(); //Si el archivo no existe, el programa lo crea
                 escribir = new FileWriter(archivo);
                 linea = new PrintWriter(escribir);
                 nombre = JOptionPane.showInputDialog("Digite su nombre","Ingrese nombre aqui");
